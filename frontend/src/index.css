@@ -1,0 +1,231 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap');
+
+:root {
+  /* Dark Mode Variables - Deep Obsidian & Luxury Gold Accents */
+  --bg-color: #070A12;
+  --sidebar-bg: #0C101A;
+  --header-bg: #0C101A;
+  --card-bg: #111726;
+  --text-main: #F8FAFC;
+  --text-muted: #94A3B8;
+  --border-color: rgba(255, 255, 255, 0.08);
+  --input-bg: #172033;
+  --shadow-main: 0 12px 35px 0 rgba(0, 0, 0, 0.45);
+  --accent-primary: #F59E0B;
+  --accent-purple: #8B5CF6;
+  --accent-cyan: #38BDF8;
+  
+  --badge-green-bg: rgba(52, 211, 153, 0.15);
+  --badge-green-text: #34D399;
+  --badge-green-border: rgba(52, 211, 153, 0.4);
+
+  --badge-red-bg: rgba(248, 113, 113, 0.15);
+  --badge-red-text: #F87171;
+  --badge-red-border: rgba(248, 113, 113, 0.4);
+
+  --badge-blue-bg: rgba(96, 165, 250, 0.15);
+  --badge-blue-text: #60A5FA;
+  --badge-blue-border: rgba(96, 165, 250, 0.4);
+}
+
+[data-theme="light"] {
+  /* Rich Soft Ice-Blue & Slate Light Theme */
+  --bg-color: #F1F5F9;
+  --sidebar-bg: #FFFFFF;
+  --header-bg: #FFFFFF;
+  --card-bg: #FFFFFF;
+  --text-main: #0F172A;
+  --text-muted: #64748B;
+  --border-color: #E2E8F0;
+  --input-bg: #F8FAFC;
+  --shadow-main: 0 10px 25px -5px rgba(245, 158, 11, 0.08), 0 8px 10px -6px rgba(0, 0, 0, 0.04);
+  --accent-primary: #D97706;
+  --accent-purple: #7C3AED;
+  --accent-cyan: #0284C7;
+
+  --badge-green-bg: #D1FAE5;
+  --badge-green-text: #047857;
+  --badge-green-border: #10B981;
+
+  --badge-red-bg: #FEE2E2;
+  --badge-red-text: #B91C1C;
+  --badge-red-border: #EF4444;
+
+  --badge-blue-bg: #DBEAFE;
+  --badge-blue-text: #1D4ED8;
+  --badge-blue-border: #3B82F6;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  transition: background-color 0.25s ease, border-color 0.25s ease, color 0.25s ease;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-main);
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 7px;
+  height: 7px;
+}
+::-webkit-scrollbar-track {
+  background: var(--bg-color);
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(148, 163, 184, 0.3);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(148, 163, 184, 0.5);
+}
+
+/* UI Cards */
+.ui-card {
+  background: var(--card-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 16px;
+  padding: 24px;
+  box-shadow: var(--shadow-main);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.ui-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 16px 35px -10px rgba(0, 0, 0, 0.25);
+}
+
+/* Luxury Hero Card Color Themes */
+.hero-card-gold {
+  background: linear-gradient(135deg, #F59E0B 0%, #D97706 50%, #B45309 100%);
+  color: #FFFFFF;
+  border-radius: 18px;
+  padding: 28px;
+  box-shadow: 0 14px 35px rgba(245, 158, 11, 0.45);
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-card-blue {
+  background: linear-gradient(135deg, #2563EB 0%, #1D4ED8 100%);
+  color: #FFFFFF;
+  border-radius: 18px;
+  padding: 28px;
+  box-shadow: 0 14px 35px rgba(37, 99, 235, 0.4);
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-card-purple {
+  background: linear-gradient(135deg, #8B5CF6 0%, #6D28D9 100%);
+  color: #FFFFFF;
+  border-radius: 18px;
+  padding: 28px;
+  box-shadow: 0 14px 35px rgba(139, 92, 246, 0.4);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Badges */
+.badge {
+  font-size: 13px;
+  font-weight: 700;
+  padding: 6px 14px;
+  border-radius: 30px;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.badge-green {
+  background: var(--badge-green-bg);
+  color: var(--badge-green-text);
+  border: 1px solid var(--badge-green-border);
+}
+
+.badge-red {
+  background: var(--badge-red-bg);
+  color: var(--badge-red-text);
+  border: 1px solid var(--badge-red-border);
+}
+
+.badge-blue {
+  background: var(--badge-blue-bg);
+  color: var(--badge-blue-text);
+  border: 1px solid var(--badge-blue-border);
+}
+
+/* Custom Range Slider */
+input[type=range] {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 100%;
+  background: transparent;
+}
+input[type=range]:focus {
+  outline: none;
+}
+input[type=range]::-webkit-slider-runnable-track {
+  width: 100%;
+  height: 6px;
+  cursor: pointer;
+  background: rgba(148, 163, 184, 0.3);
+  border-radius: 3px;
+}
+input[type=range]::-webkit-slider-thumb {
+  height: 18px;
+  width: 18px;
+  border-radius: 50%;
+  background: var(--accent-primary);
+  cursor: pointer;
+  -webkit-appearance: none;
+  appearance: none;
+  margin-top: -6px;
+  box-shadow: 0 0 10px rgba(245, 158, 11, 0.5);
+}
+
+/* Styled Data Table */
+.custom-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+}
+.custom-table th {
+  background: rgba(148, 163, 184, 0.08);
+  color: var(--text-muted);
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  padding: 14px 16px;
+  text-align: left;
+}
+.custom-table th:first-child {
+  border-top-left-radius: 10px;
+}
+.custom-table th:last-child {
+  border-top-right-radius: 10px;
+}
+.custom-table td {
+  padding: 14px 16px;
+  border-bottom: 1px solid var(--border-color);
+  font-size: 14px;
+}
+.custom-table tr:hover td {
+  background: rgba(245, 158, 11, 0.05);
+}
+
+/* Leaflet Container Fixes */
+.leaflet-container {
+  width: 100% !important;
+  height: 100% !important;
+  border-radius: 16px;
+  z-index: 10;
+}
