@@ -124,10 +124,3 @@ FastAPI automatically generates interactive OpenAPI documentation:
 - **Backend API**: FastAPI, Uvicorn, Pydantic, CORS Middleware.
 - **Machine Learning**: LightGBM, Scikit-Learn, KMeans, TreeSHAP, Geopy, Joblib, Pandas, NumPy.
 
----
-
-## 📜 License & Copyright
-
-Copyright (c) 2026 Shabaz Shiek.
-
-Distributed under the MIT License. See [LICENSE](file:///d:/HousingPrediction/LICENSE) for more details.
